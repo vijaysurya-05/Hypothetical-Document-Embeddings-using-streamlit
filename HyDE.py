@@ -11,8 +11,7 @@ st.markdown("""
             </style> """, unsafe_allow_html=True)
 
 model = SentenceTransformer(
-    "sentence-transformers/all-MiniLM-L6-v2",
-    local_files_only=True
+    "sentence-transformers/all-MiniLM-L6-v2"
 )
 client = chromadb.PersistentClient(path="pdf_db")
 groq_client = Groq(api_key=st.secrets["GROQ_API_KEY"])
